@@ -14,3 +14,13 @@ jobs:
       - run: npm run lint
       - run: npm run test
       - run: npm run build
+
+  cd:
+    needs: ci
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm install -g @railway/cli
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+      - run: echo "Done railway deploys"
