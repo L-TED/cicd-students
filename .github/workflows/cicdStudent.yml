@@ -1,4 +1,4 @@
-name: student CI/CD
+name: CI/CD Nest
 
 on:
   push:
@@ -13,3 +13,4 @@ jobs:
       - run: npm install
       - run: npm run lint
       - run: npm run test
+      - run: npm run build

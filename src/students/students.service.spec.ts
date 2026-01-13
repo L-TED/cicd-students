@@ -1,6 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { StudentsService } from './students.service';
-import { CreateStudentDto } from './dto/create-student.dto';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { Student } from './entities/student.entity';
 import fc from 'fast-check';

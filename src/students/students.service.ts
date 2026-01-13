@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { CreateStudentDto } from './dto/create-student.dto';
-import { UpdateStudentDto } from './dto/update-student.dto';
 import { Student } from './entities/student.entity';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -22,10 +21,6 @@ export class StudentsService {
 
   findOne(id: number) {
     return `학생 ID: #${id}`;
-  }
-
-  update(id: number, updateStudentDto: UpdateStudentDto) {
-    return `This action updates a #${id} student`;
   }
 
   remove(id: number) {
